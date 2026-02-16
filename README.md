@@ -8,19 +8,13 @@ A powerful, multi-mode mathematical function plotter built with **Python**, **Tk
 ## ✨ Features
 
 * **🖼️ Multi-Mode Visualization**:
-* 
+
 **2D Plotting**: Graph multiple functions simultaneously with customizable colors and styles.
-
-
-* 
+ 
 **🌀 Parametric Plots**: Visualize curves defined by  and .
-
-
-* 
+ 
 **📶 Bode Diagrams**: Analyze frequency responses (Magnitude & Phase) by providing transfer function coefficients.
-
-
-* 
+ 
 **🏔️ 3D Surfaces & Contours**: Explore functions of two variables  with interactive 3D rotations and contour maps.
 
 
@@ -99,18 +93,13 @@ title: Bode Diagram – Low-pass Filter
 
 ## 📂 Project Structure
 
-* 
-`app.py`: The main entry point of the application.
+* `app.py`: The main entry point of the application.
 
-
-* 
-`gui.py`: Handles the Tkinter interface and user interactions.
-
+* `gui.py`: Handles the Tkinter interface and user interactions.
 
 * `plotter.py`: The engine that performs math evaluations and Matplotlib rendering.
-* 
-`config_parser.py`: Logic for reading and converting configuration text files.
 
+* `config_parser.py`: Logic for reading and converting configuration text files.
 
 * `widgets.py`: Custom UI components like scrollable frames.
 
