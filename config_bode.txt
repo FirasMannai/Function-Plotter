@@ -1,0 +1,7 @@
+# First-order low-pass filter H(s) = 1 / (s + 1)
+bode_num: [1]
+bode_den: [1, 2, 1]
+wmin: 0.1
+wmax: 300
+npoints: 400
+title: Bode Diagram – 1st Order Low-pass

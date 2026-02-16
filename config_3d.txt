@@ -1,0 +1,12 @@
+fxy: sin(sqrt(x**2 + y**2)) / (1 + 0.2*(x**2 + y**2))
+xstart: -6
+xend: 6
+ystart: -6
+yend: 6
+xstep: 0.1
+ystep: 0.1
+surface: True
+contour: True
+levels: 25
+zlabel: f(x,y)
+title: Ripple Surface
