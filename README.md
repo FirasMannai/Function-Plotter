@@ -11,7 +11,7 @@ A powerful, multi-mode mathematical function plotter built with **Python**, **Tk
 
  - **2D Plotting**: Graph multiple functions simultaneously with customizable colors and styles.
  
- - **🌀 Parametric Plots**: Visualize curves defined by  and .
+ - **🌀 Parametric Plots**: Visualize curves defined by  and $x(t)$ and $y(t)$ .
  
  - **📶 Bode Diagrams**: Analyze frequency responses (Magnitude & Phase) by providing transfer function coefficients.
  
