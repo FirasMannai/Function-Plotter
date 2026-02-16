@@ -26,13 +26,10 @@ A powerful, multi-mode mathematical function plotter built with **Python**, **Tk
 
 
 * **📊 Data Overlay**: Import `.txt` or `.csv` data files to compare real-world data with mathematical models.
-* 
-**🛠️ Flexible Usage**: Use the intuitive **GUI** for interactive exploration or the **Headless Mode** for quick plots from config files.
+* **🛠️ Flexible Usage**: Use the intuitive **GUI** for interactive exploration or the **Headless Mode** for quick plots from config files.
 
 
-* 
-**💾 Config Management**: Save your plot settings to a file and reload them later to pick up right where you left off.
-
+* **💾 Config Management**: Save your plot settings to a file and reload them later to pick up right where you left off.
 
 
 ---
