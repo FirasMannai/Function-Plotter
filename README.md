@@ -7,30 +7,29 @@ A powerful, multi-mode mathematical function plotter built with **Python**, **Tk
 
 ## ✨ Features
 
-* **🖼️ Multi-Mode Visualization**:
+### 🖼️ Multi-Mode Visualization
+* **2D Plotting**: Graph multiple functions simultaneously with customizable colors, line styles, and widths.
+* **🌀 Parametric Plots**: Visualize complex curves defined by $x(t)$ and $y(t)$ equations.
+* **📶 Bode Diagrams**: Analyze frequency responses (Magnitude & Phase) simply by providing transfer function coefficients.
+* **🏔️ 3D Surfaces & Contours**: Explore functions of two variables $f(x, y)$ with interactive 3D rotations and side-by-side contour maps.
 
- - **2D Plotting**: Graph multiple functions simultaneously with customizable colors and styles.
- 
- - **🌀 Parametric Plots**: Visualize curves defined by  and $x(t)$ and $y(t)$ .
- 
- - **📶 Bode Diagrams**: Analyze frequency responses (Magnitude & Phase) by providing transfer function coefficients.
- 
- - **🏔️ 3D Surfaces & Contours**: Explore functions of two variables  with interactive 3D rotations and contour maps.
+---
 
+### 🔬 Advanced Analysis
+* **Automated Detection**: Automatically find and mark **Roots**, **Extrema**, and **Inflection Points** on your graphs.
+* **Calculus Suite**: Calculate and overlay **1st and 2nd derivatives** on the fly to analyze function behavior visually.
 
+---
 
+### 📊 Data & Integration
+* **Data Overlay**: Import `.txt` or `.csv` data files to compare real-world experimental data against mathematical models.
+* **💾 Config Management**: Save your entire session settings to a file and reload them later to pick up exactly where you left off.
 
-* **🔬 Advanced Analysis**:
-* Automatically find and mark **Roots**, **Extrema**, and **Inflection Points**.
-* Calculate and overlay **1st and 2nd derivatives** on the fly.
+---
 
-
-* **📊 Data Overlay**: Import `.txt` or `.csv` data files to compare real-world data with mathematical models.
-* **🛠️ Flexible Usage**: Use the intuitive **GUI** for interactive exploration or the **Headless Mode** for quick plots from config files.
-
-
-* **💾 Config Management**: Save your plot settings to a file and reload them later to pick up right where you left off.
-
+### 🛠️ Flexible Usage
+* **Interactive GUI**: Use the intuitive dashboard for real-time exploration and tweaking.
+* **Headless Mode**: Generate plots instantly from the command line using configuration files—perfect for automation.
 
 ---
 
