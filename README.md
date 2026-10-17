@@ -1,35 +1,48 @@
+**English** | [Deutsch](README.de.md)
 
 # 📈 Function Plotter 🚀
 
-A powerful, multi-mode mathematical function plotter built with **Python**, **Tkinter**, and **Matplotlib**. Whether you need to visualize simple 2D curves, complex 3D surfaces, or analyze control systems with Bode plots, this tool has you covered!
+A versatile plotting tool built with **Python**, **Tkinter** and **Matplotlib**. From simple 2D curves and
+parametric shapes to Bode diagrams and 3D surfaces, it turns mathematical expressions into clear, interactive plots
+– with automatic curve analysis and support for measured data.
+
+👥 Team project by **Firas Mannai** and **[Yahia Bannour](https://github.com/yahiabannour)**.
+
+| 📉 Functions, curve analysis and measured data | 📶 Bode diagram | 🏔️ 3D surface and contour lines |
+|---|---|---|
+| ![2D plot](docs/plot-2d.png) | ![Bode diagram](docs/plot-bode.png) | ![3D plot](docs/plot-3d.png) |
 
 ---
 
 ## ✨ Features
 
-### 🖼️ Multi-Mode Visualization
-* **2D Plotting**: Graph multiple functions simultaneously with customizable colors, line styles, and widths.
-* **🌀 Parametric Plots**: Visualize complex curves defined by $x(t)$ and $y(t)$ equations.
-* **📶 Bode Diagrams**: Analyze frequency responses (Magnitude & Phase) simply by providing transfer function coefficients.
-* **🏔️ 3D Surfaces & Contours**: Explore functions of two variables $f(x, y)$ with interactive 3D rotations and side-by-side contour maps.
+### 🖼️ Four Plot Modes
+* **2D Plotting**: Draw several functions at once, each with its own colour, line width and line style.
+* **🌀 Parametric Curves**: Plot curves defined by x(t) and y(t).
+* **📶 Bode Diagrams**: Show magnitude and phase of a transfer function from its numerator and denominator
+  coefficients.
+* **🏔️ 3D Surfaces & Contours**: Display functions f(x, y) as a surface and as a contour map side by side.
 
 ---
 
-### 🔬 Advanced Analysis
-* **Automated Detection**: Automatically find and mark **Roots**, **Extrema**, and **Inflection Points** on your graphs.
-* **Calculus Suite**: Calculate and overlay **1st and 2nd derivatives** on the fly to analyze function behavior visually.
+### 🔬 Curve Analysis
+* **Automatic Markers**: Find and mark **roots**, **extrema** and **inflection points** – roots are refined by
+  linear interpolation.
+* **Derivatives**: Overlay the numerical **1st and 2nd derivative** of every function.
 
 ---
 
-### 📊 Data & Integration
-* **Data Overlay**: Import `.txt` or `.csv` data files to compare real-world experimental data against mathematical models.
-* **💾 Config Management**: Save your entire session settings to a file and reload them later to pick up exactly where you left off.
+### 📊 Data & Configuration
+* **Measured Data**: Load x/y values from a `.txt` or `.csv` file and compare them with the functions, as a line or
+  scatter plot.
+* **💾 Save & Load**: Store all settings in a readable configuration file and restore them later.
 
 ---
 
-### 🛠️ Flexible Usage
-* **Interactive GUI**: Use the intuitive dashboard for real-time exploration and tweaking.
-* **Headless Mode**: Generate plots instantly from the command line using configuration files—perfect for automation.
+### 🖱️ Interactive & Safe
+* **Interactive GUI**: Live cursor coordinates, click-to-annotate points, zoom and pan, and export as an image.
+* **Headless Mode**: Generate a plot directly from a configuration file, without opening the GUI.
+* **🔒 Safe Evaluation**: Expressions can only use a whitelist of maths functions – no access to Python built-ins.
 
 ---
 
@@ -37,76 +50,63 @@ A powerful, multi-mode mathematical function plotter built with **Python**, **Tk
 
 ### 📋 Prerequisites
 
-Ensure you have Python installed, then install the required dependencies:
+Python 3 with NumPy and Matplotlib:
 
 ```bash
 pip install numpy matplotlib
-
 ```
 
 ### 🏃 Running the App
 
-1. **GUI Mode** (Default):
-```bash
-python app.py
-
-```
-
-
-This launches the interactive window where you can tweak all settings.
-
+1. **GUI Mode** (default):
+   ```bash
+   python app.py
+   ```
+   Opens the interactive window with all settings.
 
 2. **Headless Mode**:
-```bash
-python app.py config_bode.txt
-
-```
-
-
-Directly generates a plot window based on the provided configuration file.
-
-
+   ```bash
+   python app.py config_bode.txt
+   ```
+   Opens the plot for the given configuration file directly.
 
 ---
 
 ## 🛠️ Configuration File Format
 
-The application uses a simple `key: value` format for configuration files.
-
-**Example (`config_bode.txt`):**
+Configuration files use a simple `key: value` format:
 
 ```text
-# First-order low-pass filter analysis
-bode_num: [1]
-bode_den: [1, 2, 1]
-wmin: 0.1
-wmax: 300
-title: Bode Diagram – Low-pass Filter
-
+# Two functions with curve analysis and measured data
+functions: [exp(-0.5*x)*sin(x), cos(x)]
+xstart: 0
+xend: 10
+xstep: 0.1
+find_roots: True
+find_extrema: True
+data_file: messwerte.txt
+title: Function Plot Example
 ```
+
+More examples: [`config_bode.txt`](config_bode.txt), [`config_3d.txt`](config_3d.txt) and [`saved_config.txt`](saved_config.txt).
 
 ---
 
 ## 📂 Project Structure
 
-* `app.py`: The main entry point of the application.
-
-* `gui.py`: Handles the Tkinter interface and user interactions.
-
-* `plotter.py`: The engine that performs math evaluations and Matplotlib rendering.
-
-* `config_parser.py`: Logic for reading and converting configuration text files.
-
-* `widgets.py`: Custom UI components like scrollable frames.
+* `app.py`: Entry point – starts the GUI, or headless mode when a configuration file is given.
+* `gui.py`: The Tkinter interface with controls for every mode and the embedded Matplotlib canvas.
+* `plotter.py`: All plotting and the numerical analysis, independent of the GUI.
+* `config_parser.py`: Reads configuration files and converts the values to booleans, numbers and lists.
+* `widgets.py`: A scrollable frame for the long control panel.
+* `config_bode.txt`, `config_3d.txt`, `saved_config.txt`, `messwerte.txt`: Example configurations and measured data.
 
 ---
 
 ## 🧩 Supported Math Functions
 
-You can use standard math notation in the input fields, including:
+Use standard math notation in the input fields:
 
 * `sin`, `cos`, `tan`, `exp`, `log`, `log10`, `sqrt`, `abs`
 * Constants: `pi`, `e`
-* Power operator: `^` (e.g., `x^2`)
-
----
+* Power operator: `^` (e.g. `x^2`)
